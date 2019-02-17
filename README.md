@@ -12,9 +12,9 @@ please use models provided by AWS.
 
 ## Memory Simulation
 The memory model has the following parameters:
-    SIZE - The number of cache blocks that the memory can hold
-    FILL_RANDOM - Set this parameter to 1 if the empty memory is to be filled with random bytes, otherwise its set to 0
-    REPORT_INCORRECT_ADDR - Set the parameter to 1 to report read commands to addresses which have not been writtem yet.
+    SIZE - The number of cache blocks that the memory can hold <br />
+    FILL_RANDOM - Set this parameter to 1 if the empty memory is to be filled with random bytes, otherwise its set to 0 <br />
+    REPORT_INCORRECT_ADDR - Set the parameter to 1 to report read commands to addresses which have not been writtem yet <br />
 
 The functions provided for memory simualtion are
 
@@ -38,12 +38,12 @@ This function reads from the memory and returns the data stored in it.
 This function resets the memory.
 
 ## AXI Channel Simulation
-The AXI simulation model has two models for use. If only one channel is required, use axi_interface_model and for multiple channels use multiple_axi_channels.
-The parameters are:
-    NUM_CHANNELS - The number of channels wanted for simulation. Each channel is an independant axi bus with its own memory structure.
-    READ_LATENCY - Read latency required in cycles
-    WRITE_LATENCY - Write latency required in cycles
-    MAX_IDS - Maximum outstanding requests allowed. Set this to the correct value required for better simulation runtimes and memory usage.
-    SIZE - Total size across all channels. If used with axi_interface_model, this parameter is the size of the memory for that channel. If used with multiple_axi_channels, this parameter will be divided for among NUM_CHANNELS
-    FILL_RANDOM - Set this parameter to 1 if the empty memory is to be filled with random bytes, otherwise its set to 0
-    REPORT_INCORRECT_ADDR - Set the parameter to 1 to report read commands to addresses which have not been writtem yet.
+The AXI simulation model has two models for use. If only one channel is required, use axi_interface_model and for multiple channels use multiple_axi_channels.<br />
+The parameters are:<br />
+    NUM_CHANNELS - The number of channels wanted for simulation. Each channel is an independant axi bus with its own memory structure<br />
+    READ_LATENCY - Read latency required in cycles<br />
+    WRITE_LATENCY - Write latency required in cycles<br />
+    MAX_IDS - Maximum outstanding requests allowed. Set this to the correct value required for better simulation runtimes and memory usage<br />
+    SIZE - Total size across all channels. If used with axi_interface_model, this parameter is the size of the memory for that channel. If used with multiple_axi_channels, this parameter will be divided for among NUM_CHANNELS<br />
+    FILL_RANDOM - Set this parameter to 1 if the empty memory is to be filled with random bytes, otherwise its set to 0<br />
+    REPORT_INCORRECT_ADDR - Set the parameter to 1 to report read commands to addresses which have not been writtem yet<br />
